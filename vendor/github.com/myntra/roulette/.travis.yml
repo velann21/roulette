@@ -1,0 +1,22 @@
+language: go
+
+go:
+  - 1.8.1
+
+before_install:
+  - go get github.com/mattn/goveralls
+
+os:
+  - linux
+  - osx
+
+install:
+  - go get -v
+
+script:
+  - go build -v .
+  - $HOME/gopath/bin/goveralls -package "github.com/myntra/roulette" -service=travis-ci
+
+notifications:
+  email:
+    - badr.adnaan@gmail.com
