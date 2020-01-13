@@ -1,4 +1,4 @@
-module gitlab.reynencourt.com/reynen-court/roulette
+module github.com/velann21/roulette
 
 go 1.12
 
